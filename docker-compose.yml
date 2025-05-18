@@ -17,7 +17,7 @@ services:
       SSH_PORT: 888
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
-      POSTGRES_DB: mydb
+      POSTGRES_DB: gdb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: changeme
 
@@ -30,7 +30,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: changeme
-      POSTGRES_DB: mydb
+      POSTGRES_DB: gdb
     volumes:
       - pgdata:/var/lib/postgresql/data
 
