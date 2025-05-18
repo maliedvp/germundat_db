@@ -17,6 +17,7 @@ jobs:
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
     - name: Checkout repository
       uses: actions/checkout@v4
 
@@ -32,7 +33,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker Image with Compose
-      run: docker-compose build app
+      run: docker compose build app
 
     - name: Push Docker Image with Compose
-      run: docker-compose push app
+      run: docker compose push app
